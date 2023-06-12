@@ -1,6 +1,6 @@
-# Web Scraping with PHP
-
 [![Integration Tests](https://github.com/AlcidesRC/zenrows-web-scraping-with-php/actions/workflows/integration-tests.yml/badge.svg)](https://github.com/AlcidesRC/zenrows-web-scraping-with-php/actions/workflows/integration-tests.yml)
+
+# Web Scraping with PHP
 
 [TOC]
 
@@ -100,7 +100,7 @@ $ git clone git@github.com:alcidesrc/zenrows-web-scraping-with-php.git .
 PHPUnit 9.6.8 by Sebastian Bergmann and contributors.
 
 Runtime:       PHP 8.1.19 with PCOV 1.0.11
-Configuration: /code/phpunit.xml
+Configuration: /app/phpunit.xml
 Random Seed:   1686218934
 
 ..............                                                    14 / 14 (100%)
