@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'output' => '/output/scrapeme-live-shop.csv',
+    'output' => './output/scrapeme-live-shop.csv',
 
     'concurrency' => 12,
 
