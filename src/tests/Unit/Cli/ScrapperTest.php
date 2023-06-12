@@ -18,7 +18,7 @@ final class ScrapperTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->config                = include('/code/config/app.php');
+        $this->config                = include('/app/config/app.php');
         $this->config['output']      = '/dev/null';
         $this->config['concurrency'] = 1;
     }
@@ -50,7 +50,7 @@ final class ScrapperTest extends TestCase
         $loadFixture = static function (int $page): array {
             return unserialize(
                 file_get_contents(
-                    sprintf('/code/tests/Fixture/Cli/ScrapperTest/page-%d.serialized', $page)
+                    sprintf('/app/tests/Fixture/Cli/ScrapperTest/page-%d.serialized', $page)
                 )
             );
         };
