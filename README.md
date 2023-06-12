@@ -1,5 +1,7 @@
 # Web Scraping with PHP
 
+[![Integration Tests](https://github.com/AlcidesRC/zenrows-web-scraping-with-php/actions/workflows/integration-tests.yml/badge.svg)](https://github.com/AlcidesRC/zenrows-web-scraping-with-php/actions/workflows/integration-tests.yml)
+
 [TOC]
 
 ## Summary
