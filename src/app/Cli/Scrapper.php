@@ -16,19 +16,29 @@ use voku\helper\HtmlDomParser;
 
 final class Scrapper
 {
-    private readonly Client $client;
-    private readonly int $concurrency;
+    private Client $client;
+    private int $concurrency;
+
+    /**
+     * @var array<int|string, mixed>
+     */
     private array $result;
 
+    /**
+     * @param array<string, array<int, int>|int|string> $config
+     */
     public function setup(array $config): self
     {
-        $this->client      = new Client($config['guzzle_client']);
-        $this->concurrency = $config['concurrency'];
+        $this->client      = new Client($config['guzzle_client']);  // @phpstan-ignore-line
+        $this->concurrency = $config['concurrency'];                // @phpstan-ignore-line
         $this->result      = [];
 
         return $this;
     }
 
+    /**
+     * @return array{int, array{string, string, string, string}}
+     */
     public function processWholeShopWithConcurrency(): array
     {
         $requestsGenerator = function () {
@@ -79,8 +89,9 @@ final class Scrapper
 
         $parser = HtmlDomParser::str_get_html($response->getBody()->getContents());
 
+        // @phpstan-ignore-next-line
         $links = $parser->find('nav.woocommerce-pagination', 0)->find('ul.page-numbers li a.page-numbers')->text;
 
-        return (int) max($links);
+        return (int) max((array) $links);
     }
 }

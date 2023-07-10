@@ -11,6 +11,9 @@ use PHPUnit\Framework\TestCase;
  * @internal
  *
  * @coversNothing
+ *
+ * @phpstan-type DataProviderEntry1 array{float, string}
+ * @phpstan-type DataProviderEntry2 array{int, string}
  */
 final class HelpersTest extends TestCase
 {
@@ -26,6 +29,9 @@ final class HelpersTest extends TestCase
         static::assertEquals($result, $expected);
     }
 
+    /**
+     * @return array<int, DataProviderEntry1>
+     */
     public function dataProviderForMethodReadableTime(): array
     {
         return [
@@ -46,6 +52,9 @@ final class HelpersTest extends TestCase
         static::assertEquals($result, $expected);
     }
 
+    /**
+     * @return array<int, DataProviderEntry2>
+     */
     public function dataProviderForMethodReadableBytes(): array
     {
         return [

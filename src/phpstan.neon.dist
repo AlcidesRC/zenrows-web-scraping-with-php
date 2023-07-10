@@ -1,0 +1,12 @@
+parameters:
+	paths:
+		- app
+		- tests
+	level: 9
+	checkGenericClassInNonGenericObjectType: false
+	excludePaths:
+	ignoreErrors:
+		-
+			messages:
+				- '#Method UnitTests\\Cli\\ScrapperTest\:\:dataProviderForMethodMethodProcessWholeShopWithConcurrency\(\) should return array(.*)+\.#'
+			path: tests/Unit/Cli/ScrapperTest.php
